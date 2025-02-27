@@ -1,0 +1,113 @@
+/* Sidebar */
+.sticky-sidebar {
+  background-color: #f8f9fa; /* Light background for sidebar */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.sticky-sidebar h4 {
+  background-color: #ffc107; /* Highlight for the title */
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.sticky-sidebar a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.sticky-sidebar a.active,
+.sticky-sidebar a:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Header Section */
+.section-title {
+  font-size: 24px;
+  color: #0056b3;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Category Form */
+.category-form-container {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Table */
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f1f1f1;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-primary:hover {
+  background-color: #003f88;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #b52a37;
+}
+
+/* Modal */
+.ant-modal-content {
+  border-radius: 8px;
+}
+
+.ant-modal-header {
+  background-color: #0056b3;
+  color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.ant-modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-modal-footer .btn {
+  margin: 0 5px;
+}
