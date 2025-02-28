@@ -247,12 +247,10 @@ main {
   background-color: #c5eff5;
 }
 .filter-section {
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 15%;
   height: fit-content;
   z-index: 1000;
   max-height: calc(100vh - 20px);
