@@ -33,9 +33,10 @@ const CartPage = () => {
       );
       setClientToken(data?.clientToken);
     } catch (error) {
-      console.log(error);
+      console.error("Error fetching payment token:", error);
     }
   };
+
   useEffect(() => {
     getToken();
   }, [auth?.token]);
@@ -56,12 +57,13 @@ const CartPage = () => {
       localStorage.removeItem("cart");
       setCart([]);
       navigate("/dashboard/user/orders");
-      toast.success("Payment Completed Successfully ");
+      toast.success("Payment Completed Successfully");
     } catch (error) {
-      console.log(error);
+      console.error("Payment error:", error);
       setLoading(false);
     }
   };
+
   return (
     <Layout>
       <div className="cart-container container">
@@ -92,7 +94,9 @@ const CartPage = () => {
                   <div className="product-details text-center">
                     <p className="product-name">{product.name}</p>
                     <p className="product-description">
-                      {product.description.substring(0, 50)}...
+                      {product.description
+                        ? product.description.substring(0, 50) + "..."
+                        : "No description available"}
                     </p>
                     <p className="product-price">₹{product.price}</p>
                   </div>
@@ -154,8 +158,8 @@ const CartPage = () => {
                 <button
                   className="btn btn-primary"
                   onClick={handlePayment}
-                  disabled={!clientToken || !instance}>
-                  {loading ? "" : "Make Payment"}
+                  disabled={!clientToken || !instance || loading}>
+                  {loading ? "Processing..." : "Make Payment"}
                 </button>
               </div>
             </div>
